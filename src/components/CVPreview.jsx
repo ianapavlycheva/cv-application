@@ -1,5 +1,5 @@
 import '../styles/CVPreview.css';
-export default function CVPreview({ general }) {
+export default function CVPreview({ general, education }) {
   return (
     <div>
         <div className="cv-preview-header">
@@ -12,7 +12,21 @@ export default function CVPreview({ general }) {
         <p><strong>Email:</strong> {general?.email || ''}</p>
         <p><strong>Phone:</strong> {general?.phone || ''}</p>
       </section>
+
+        <section>
+          <h3>Education</h3>
+          {education?.institution && (
+            <div className="education-entry">
+              <p><strong>{education.institution}</strong></p>
+              <p>{education.degree}</p>
+              <p>
+                <em>{education.startDate} – {education.endDate}</em>
+              </p>
+            </div>
+          )}
+        </section>
     </div>
     </div>
   );
 }
+          
