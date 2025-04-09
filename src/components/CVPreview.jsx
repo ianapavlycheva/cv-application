@@ -13,18 +13,20 @@ export default function CVPreview({ general, education, experience }) {
         <p><strong>Phone:</strong> {general?.phone || ''}</p>
       </section>
 
-        <section>
-          <h3>Education</h3>
-          {education?.institution && (
-            <div className="education-entry">
-              <p><strong>{education.institution}</strong></p>
-              <p>{education.degree}</p>
-              <p>
-                <em>{education.startDate} – {education.endDate}</em>
-              </p>
-            </div>
-          )}
-        </section>
+<section>
+  <h3>Education</h3>
+  {education?.length > 0 ? (
+    education.map((edu, index) => (
+      <div className="education-entry" key={index}>
+        <p><strong>{edu.institution}</strong></p>
+        <p>{edu.degree}</p>
+        <p><em>{edu.startDate} – {edu.endDate}</em></p>
+      </div>
+    ))
+  ) : (
+    <p>No education info added.</p>
+  )}
+</section>
 
         <section>
           <h3>Experience</h3>
