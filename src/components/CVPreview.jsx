@@ -1,5 +1,5 @@
 import '../styles/CVPreview.css';
-export default function CVPreview({ general, education }) {
+export default function CVPreview({ general, education, experience }) {
   return (
     <div>
         <div className="cv-preview-header">
@@ -25,6 +25,19 @@ export default function CVPreview({ general, education }) {
             </div>
           )}
         </section>
+
+        <section>
+          <h3>Experience</h3>
+          {experience?.company && (
+            <div className="experience-entry">
+              <p><strong>{experience.company}</strong></p>
+              <p>{experience.position}</p>
+              <p><em>{experience.startDate} – {experience.endDate}</em></p>
+              <p>{experience.description}</p>
+            </div>
+          )}
+        </section>
+        
     </div>
     </div>
   );
