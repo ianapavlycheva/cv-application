@@ -10,14 +10,14 @@ import CVPreview from "./components/CVPreview";
 function App() {
   const [generalInfo, setGeneralInfo] = useState({});
   const [educationInfo, setEducationInfo] = useState([]);
-  const [experienceInfo, setExperienceInfo] = useState({});
+  const [experienceInfo, setExperienceInfo] = useState([]);
 
   return (
     <div className="container">
       <div className="editor">
         <PersonalDetailsSection onSubmit={setGeneralInfo} />
         <EducationSection educationList={educationInfo} setEducationList={setEducationInfo} />
-        <ExperienceSection onSubmit={setExperienceInfo} />
+        <ExperienceSection experienceList={experienceInfo} setExperienceInfo={setExperienceInfo} />
       </div>
       <div className="preview">
         <CVPreview
