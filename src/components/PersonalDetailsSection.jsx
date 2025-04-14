@@ -37,7 +37,7 @@ export default function PersonalDetailsSection({ onSubmit }) {
                     <p><strong>Name:</strong> {info.name}</p>
                     <p><strong>Email:</strong> {info.email}</p>
                     <p><strong>Phone:</strong> {info.phone}</p>
-                    <button onClick={handleEdit}>Edit</button>
+                    <button type="button" className="edit-btn" onClick={handleEdit}>Edit</button>
                 </div>
                 )}
         </div>

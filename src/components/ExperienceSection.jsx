@@ -65,8 +65,8 @@ export default function ExperienceSection({ experienceList, setExperienceList })
                         <p><strong>{entry.company}</strong> – {entry.position}</p>
                         <p>{entry.startDate} to {entry.endDate}</p>
                         <p><strong>{entry.description}</strong></p>
-                        <button onClick={() => handleEdit(index)}>Edit</button>
-                        <button onClick={() => handleDelete(index)}>Delete</button>
+                        <button type="button" className="edit-btn" onClick={() => handleEdit(index)}>Edit</button>
+                        <button type="button" className="delete-btn" onClick={() => handleDelete(index)}>Delete</button>
                     </li>
                 ))}
             </ul>
