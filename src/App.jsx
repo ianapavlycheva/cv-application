@@ -17,7 +17,7 @@ function App() {
       <div className="editor">
         <PersonalDetailsSection onSubmit={setGeneralInfo} />
         <EducationSection educationList={educationInfo} setEducationList={setEducationInfo} />
-        <ExperienceSection experienceList={experienceInfo} setExperienceInfo={setExperienceInfo} />
+        <ExperienceSection experienceList={experienceInfo} setExperienceList={setExperienceInfo} />
       </div>
       <div className="preview">
         <CVPreview
